@@ -18,3 +18,6 @@ Route::get('/form','todoController@form');
 Route::post('/disp','todoController@save'); 
 Route::get('/view','todoController@form1');
 Route::post('/view','todoController@view');
+Route::get('/delete/{id}','todoController@delete');
+Route::get('/edit/{id}','todoController@edit');
+Route::post('/new','todoController@update');

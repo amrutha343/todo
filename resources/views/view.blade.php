@@ -21,6 +21,8 @@
 <td>{{$todo->id}}</td>
 <td>{{$todo->title}}</td>
 <td>{{$todo->desc}}</td>
+<td><a href="/delete/{{$todo->id}}">Delete</a></td>
+<td><a href="/edit/{{$todo->id}}">Update</a></td>
 </tr>
 @endforeach
 </table>

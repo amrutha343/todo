@@ -16,6 +16,7 @@
 <input type="Submit" value="View"> 
 {{csrf_field()}}
   </form>
+
   </center>
   </body>
 </html>

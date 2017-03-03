@@ -24,4 +24,21 @@ class todoController extends Controller
         $todos=$todo->all();
         return view('view',['todo'=>$todos]);
     }
+    public function delete($id){
+        $todo=todo::find($id); 
+        $todos=$todo->delete();
+        return back();
+    }
+    public function edit($id){
+        $todo=todo::find($id);
+        return view('form2',['todo'=>$todo]);
+          }
+    public function update(Request $request){
+          $todo=todo::find($request->id); 
+        $todo->title=$request->title;
+        $todo->desc=$request->desc;
+        $todo->save();
+        return Redirect('/view');
+    }
+
 }
